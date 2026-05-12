@@ -7,7 +7,13 @@ let carouselArr = [];
 
 
 //class Carousel
-class Carousel {
+class Carousel { 
+
+    constructor(image,title,url){
+        this.image = image;
+        this.title = title;
+        this.url = url;
+    }
 
     
       
@@ -27,6 +33,21 @@ class Carousel {
     }
 
     static Next(){
+        document.getElementById("carousel").innerHTML=
+        `<img src="img/${carouselArr[Carousel._sequence].image}" width="100%">`;
+
+        document.getElementById("carousel-title").innerHTML=
+        `<a href="${carouselArr[Carousel._sequence].url}">
+        ${carouselArr[Carousel._sequence].title} 
+        </a>`;
+
+        Carousel._sequence++;
+
+        if(Carousel._sequence >= Carousel._size){
+        Carousel._sequence = 0;
+        
+        }
+
         
     }
 };
