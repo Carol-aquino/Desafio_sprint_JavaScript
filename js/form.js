@@ -7,14 +7,21 @@ class contato {
 
 function Post(form) {
 
-  let data = new contato(form.elements.namedItem("nome").value,
-            form.elements.namedItem("sobrenome").value, 
-            form.elements.namedItem("email").value, 
-            form.elements.namedItem("cpf").value, 
-            form.elements.namedItem("telefone").value, 
-            form.elements.namedItem("contato").value);
-  
-}
+  let contato = {
+            nome: form.elements.namedItem("nome").value,
+           email: form.elements.namedItem("email").value, 
+           telefone: form.elements.namedItem("telefone").value, 
+            contato: form.elements.namedItem("contato").value
+  };
+
+            let lista = JSON.parse(localStorage.getItem("contatos")) || [];
+            lista.push(contato);
+            localStorage.setItem("contatos", JSON.stringify(lista));
+            alert("Dados salvos com sucesso!");
+            form.reset();
+            return false;
+  }
+
 
 function Enviar() {
 

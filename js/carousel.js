@@ -35,6 +35,9 @@ class Carousel {
     }
 
     static Next(){
+
+          if (!carouselArr || carouselArr.length === 0) return;
+
         document.getElementById("carousel").innerHTML=
         `<img src="img/${carouselArr[Carousel._sequence].image}" width="100%">`;
 
