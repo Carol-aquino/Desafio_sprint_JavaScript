@@ -137,3 +137,37 @@ button {
     font-size: 14px;
     font-weight: bold;
 }
+
+#carousel-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-carousel {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+
+    background: rgba(19,81,216,0.8);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.bnt-carousel.left {
+    left: 20px;
+
+}
+
+.btn-carousel.right {
+    right: 20px;
+}
