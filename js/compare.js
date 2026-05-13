@@ -75,7 +75,7 @@ function UpdateCompareTable() {
     for(let i = 0; i < carArr.length; i++){
 
         document.getElementById(`compare_image_${i}`).innerHTML =
-        `<img src="${carArr[i].image}" width="200">`;
+       `<img src="${carArr[i].image}" width="200">`;
 
          document.getElementById(`compare_modelo_${i}`).innerHTML =
          carArr[i].nome;
@@ -89,13 +89,13 @@ function UpdateCompareTable() {
         document.getElementById(`compare_potencia_${i}`).innerHTML =
         carArr[i].potencia;
 
-         document.getElementById(`compare_alturaCacamba_${i}`).innerHTML =
+         document.getElementById(`compare_alturacacamba_${i}`).innerHTML =
         carArr[i].alturaCacamba;
 
-         document.getElementById(`compare_alturaVeiculo_${i}`).innerHTML =
+         document.getElementById(`compare_alturaveiculo_${i}`).innerHTML =
         carArr[i].alturaVeiculo;
 
-         document.getElementById(`compare_alturaSolo_${i}`).innerHTML =
+         document.getElementById(`compare_alturasolo_${i}`).innerHTML =
         carArr[i].alturaSolo;
 
          document.getElementById(`compare_capacidadedecarga_${i}`).innerHTML =

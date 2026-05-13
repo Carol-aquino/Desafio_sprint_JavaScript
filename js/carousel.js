@@ -13,6 +13,8 @@ class Carousel {
         this.image = image;
         this.title = title;
         this.url = url;
+
+
     }
 
     
@@ -50,4 +52,46 @@ class Carousel {
 
         
     }
+     static NextManual(){
+
+        clearInterval(Carousel._interval);
+
+        Carousel.Next();
+
+        Carousel._interval = setInterval(function(){
+
+            Carousel.Next();
+
+        }, 5000);
+    }
+
+static Prev(){
+
+        clearInterval(Carousel._interval);
+
+        Carousel._sequence--;
+
+        if(Carousel._sequence < 0){
+
+            Carousel._sequence = Carousel._size - 1;
+
+        }
+
+        document.getElementById("carousel").innerHTML =
+        `<img src="img/${carouselArr[Carousel._sequence].image}" width="100%">`;
+
+        document.getElementById("carousel-title").innerHTML =
+        `<a href="${carouselArr[Carousel._sequence].url}">
+            ${carouselArr[Carousel._sequence].title}
+        </a>`;
+
+        Carousel._interval = setInterval(function(){
+
+            Carousel.Next();
+
+        }, 5000);
+    }
+
 };
+
+
