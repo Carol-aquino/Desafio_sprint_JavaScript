@@ -63,54 +63,66 @@ function ShowCompare() {
         return;
     }
 
+
     UpdateCompareTable();
     document.getElementById("compare").style.display = "block";
-}
+     
+    }
+
+    
 
 function HideCompare(){
     document.getElementById("compare").style.display = "none"; 
 }
 
 function UpdateCompareTable() {
+
+    console.log("Entrou");
+
     for(let i = 0; i < carArr.length; i++){
 
+        console.log("Imagem");
         document.getElementById(`compare_image_${i}`).innerHTML =
-       `<img src="${carArr[i].image}" width="200">`;
+        `<img src="${carArr[i].image}" width="200">`;
 
-         document.getElementById(`compare_modelo_${i}`).innerHTML =
-         carArr[i].nome;
+        console.log("Modelo");
+        document.getElementById(`compare_modelo_${i}`).innerHTML =
+        carArr[i].nome;
 
-          document.getElementById(`compare_preco_${i}`).innerHTML =
-        carArr[i].preco;
+        console.log("Altura cacamba");
+        document.getElementById(`compare_alturacacamba_${i}`).innerHTML =
+        carArr[i].alturaCacamba;
 
+        console.log("Altura veiculo");
+        document.getElementById(`compare_alturaveiculo_${i}`).innerHTML =
+        carArr[i].alturaVeiculo;
+
+        console.log("Altura solo");
+        document.getElementById(`compare_alturasolo_${i}`).innerHTML =
+        carArr[i].alturaSolo;
+
+        console.log("Capacidade");
+        document.getElementById(`compare_capacidadecarga_${i}`).innerHTML =
+        carArr[i].capacidadeCarga;
+
+        console.log("Motor");
         document.getElementById(`compare_motor_${i}`).innerHTML =
         carArr[i].motor;
 
+        console.log("Potencia");
         document.getElementById(`compare_potencia_${i}`).innerHTML =
         carArr[i].potencia;
 
-         document.getElementById(`compare_alturacacamba_${i}`).innerHTML =
-        carArr[i].alturaCacamba;
-
-         document.getElementById(`compare_alturaveiculo_${i}`).innerHTML =
-        carArr[i].alturaVeiculo;
-
-         document.getElementById(`compare_alturasolo_${i}`).innerHTML =
-        carArr[i].alturaSolo;
-
-         document.getElementById(`compare_capacidadedecarga_${i}`).innerHTML =
-        carArr[i].capacidadeCarga;
-
-         document.getElementById(`compare_volumecacamba_${i}`).innerHTML =
+        console.log("Volume");
+        document.getElementById(`compare_volumecacamba_${i}`).innerHTML =
         carArr[i].volumeCacamba;
 
-         document.getElementById(`compare_roda_${i}`).innerHTML =
+        console.log("Roda");
+        document.getElementById(`compare_roda_${i}`).innerHTML =
         carArr[i].roda;
 
-
-
-
-
+        console.log("Preco");
+        document.getElementById(`compare_preco_${i}`).innerHTML =
+        carArr[i].preco;
     }
-    
 }
