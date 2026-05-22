@@ -14,6 +14,8 @@ function Post(form) {
             contato: form.elements.namedItem("contato").value
   };
 
+  console.log(contato);
+
             let lista = JSON.parse(localStorage.getItem("contatos")) || [];
             lista.push(contato);
             localStorage.setItem("contatos", JSON.stringify(lista));
