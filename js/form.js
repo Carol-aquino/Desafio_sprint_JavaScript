@@ -16,6 +16,7 @@ function Post(form) {
 
   console.log(contato);
 
+         Enviar(contato.nome);
             let lista = JSON.parse(localStorage.getItem("contatos")) || [];
             lista.push(contato);
             localStorage.setItem("contatos", JSON.stringify(lista));
@@ -25,11 +26,9 @@ function Post(form) {
   }
 
 
-function Enviar() {
+function Enviar(nome) {
 
-    var nome = document.getElementById("nomeid");
-
-    if (nome.value != "") {
+    if (nome != "") {
         alert('Obrigado sr(a) ' + nome.value + ' os seus dados foram encaminhados com sucesso');
     }
 
